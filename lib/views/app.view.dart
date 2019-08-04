@@ -8,13 +8,13 @@ import 'package:wow_flutter/views/demo/demo.view.dart';
 import 'package:wow_flutter/views/util/util.view.dart';
 import 'package:wow_flutter/common/application.dart';
 
-class AppPage extends StatefulWidget {
+class AppView extends StatefulWidget {
 
   @override
-  _AppPageState createState() => new _AppPageState();
+  _AppViewState createState() => new _AppViewState();
 }
 
-class _AppPageState extends State<AppPage> with SingleTickerProviderStateMixin {
+class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
 
   // Tab页的控制器，可以用来定义Tab标签和内容页的坐标
   TabController _tabController;

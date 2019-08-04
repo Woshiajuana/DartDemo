@@ -6,6 +6,7 @@ import 'package:wow_flutter/views/home/home.view.dart';
 import 'package:wow_flutter/views/demo/demo.view.dart';
 import 'package:wow_flutter/views/util/util.view.dart';
 import 'package:wow_flutter/views/about/about.view.dart';
+import 'package:wow_flutter/views/welcome/welcome.view.dart';
 
 class Router {
 
@@ -19,9 +20,39 @@ class Router {
 
   static Map<String, Map<String, dynamic>> config = {
     '/': {
-      'route': (_) => new WelcomePage(),
+      'route': (_) => new WelcomeView(),
       'handle': (params) {
-        return new WelcomePage();
+        return new WelcomeView();
+      }
+    },
+    'app': {
+      'route': (_) => new AppView(),
+      'handle': (params) {
+        return new AppView();
+      }
+    },
+    'home': {
+      'route': (_) => new HomeView(),
+      'handle': (params) {
+        return new HomeView();
+      }
+    },
+    'demo': {
+      'route': (_) => new DemoView(),
+      'handle': (params) {
+        return new DemoView();
+      }
+    },
+    'util': {
+      'route': (_) => new UtilView(),
+      'handle': (params) {
+        return new UtilView();
+      }
+    },
+    'about': {
+      'route': (_) => new AboutView(),
+      'handle': (params) {
+        return new AboutView();
       }
     },
   };
