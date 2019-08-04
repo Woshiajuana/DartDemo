@@ -1,7 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-//import 'package:wow_flutter/pages/appPage.dart';
+import 'package:wow_flutter/views/app.view.dart';
+import 'package:wow_flutter/views/home/home.view.dart';
+import 'package:wow_flutter/views/demo/demo.view.dart';
+import 'package:wow_flutter/views/util/util.view.dart';
+import 'package:wow_flutter/views/about/about.view.dart';
 
 class Router {
 
@@ -15,10 +19,10 @@ class Router {
 
   static Map<String, Map<String, dynamic>> config = {
     '/': {
-//      'route': (_) => new WelcomePage(),
-//      'handle': (params) {
-//        return new WelcomePage();
-//      }
+      'route': (_) => new WelcomePage(),
+      'handle': (params) {
+        return new WelcomePage();
+      }
     },
   };
 
