@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   final store = new Store<AppState>(
     appReducer,
     initialState: new AppState(
-      userInfo: UserInfo.empty(),
+
     ),
   );
 
