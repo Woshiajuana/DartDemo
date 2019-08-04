@@ -1,16 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:wow_flutter/pages/appPage.dart';
-import 'package:wow_flutter/pages/welcome/welcomePage.dart';
-import 'package:wow_flutter/pages/login/loginPage.dart';
-import 'package:wow_flutter/pages/list/listPage.dart';
-import 'package:wow_flutter/pages/details/detailsPage.dart';
-import 'package:wow_flutter/pages/confirm/confirmPage.dart';
-import 'package:wow_flutter/pages/address/addressPage.dart';
-import 'package:wow_flutter/pages/address/addressInfoPage.dart';
-import 'package:wow_flutter/pages/order/orderPage.dart';
-import 'package:wow_flutter/pages/order/orderDetailsPage.dart';
+//import 'package:wow_flutter/pages/appPage.dart';
 
 class Router {
 
@@ -24,64 +15,10 @@ class Router {
 
   static Map<String, Map<String, dynamic>> config = {
     '/': {
-      'route': (_) => new WelcomePage(),
-      'handle': (params) {
-        return new WelcomePage();
-      }
-    },
-    'app': {
-      'route': (_) => new AppPage(),
-      'handle': (params) {
-        return new AppPage();
-      }
-    },
-    'login': {
-      'route': (_) => new LoginPage(),
-      'handle': (params) {
-        return new LoginPage();
-      }
-    },
-    'order': {
-      'route': (_) => new OrderPage(),
-      'handle': (params) {
-        return new OrderPage();
-      }
-    },
-    'orderDetails': {
-      'route': (_) => new OrderDetailsPage(),
-      'handle': (params) {
-        return new OrderDetailsPage(orderNo: params['orderNo'],);
-      }
-    },
-    'address': {
-      'route': (_) => new AddressPage(),
-      'handle': (params) {
-        return new AddressPage(from: params['from']);
-      }
-    },
-    'addressInfo': {
-      'route': (_) => new AddressInfoPage(),
-      'handle': (params) {
-        return new AddressInfoPage(addressId: params['addressId']);
-      }
-    },
-    'confirm': {
-      'route': (_) => new ConfirmPage(),
-      'handle': (params) {
-        return new ConfirmPage(specs: params['specs'], goodsId: params['goodsId'],);
-      }
-    },
-    'list': {
-      'route': (_) => new ListPage(),
-      'handle': (params) {
-        return new ListPage();
-      }
-    },
-    'details': {
-      'route': (_) => new DetailsPage(),
-      'handle': (params) {
-        return new DetailsPage(goodsId: params['goodsId'],);
-      }
+//      'route': (_) => new WelcomePage(),
+//      'handle': (params) {
+//        return new WelcomePage();
+//      }
     },
   };
 
