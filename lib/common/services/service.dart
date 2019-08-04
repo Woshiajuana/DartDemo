@@ -1,0 +1,33 @@
+
+import 'package:wow_flutter/common/services/user.service.dart';
+import 'package:wow_flutter/common/services/goods.service.dart';
+import 'package:wow_flutter/common/services/address.service.dart';
+import 'package:wow_flutter/common/services/order.service.dart';
+
+class Service {
+
+  static final Service _service = Service._internal();
+
+  factory Service () {
+    return _service;
+  }
+
+  Service._internal();
+
+  User get user {
+    return new User();
+  }
+
+  Goods get goods {
+    return new Goods();
+  }
+
+  Address get address {
+    return new Address();
+  }
+
+  Order get order {
+    return new Order();
+  }
+
+}
