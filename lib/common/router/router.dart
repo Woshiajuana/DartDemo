@@ -7,6 +7,7 @@ import 'package:wow_flutter/views/demo/demo.view.dart';
 import 'package:wow_flutter/views/util/util.view.dart';
 import 'package:wow_flutter/views/about/about.view.dart';
 import 'package:wow_flutter/views/welcome/welcome.view.dart';
+import 'package:wow_flutter/views/demo/nestedScrollView.demo.view.dart';
 
 class Router {
 
@@ -53,6 +54,12 @@ class Router {
       'route': (_) => new AboutView(),
       'handle': (params) {
         return new AboutView();
+      }
+    },
+    'nestedScrollerView': {
+      'route': (_) => new NestedScrollViewDemo(),
+      'handle': (params) {
+        return new NestedScrollViewDemo(titleText: params['titleText']);
       }
     },
   };

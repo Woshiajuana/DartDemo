@@ -11,9 +11,9 @@ class _DemoViewState extends State<DemoView> {
 
   List _arrData = [
     {
-      'name': '示例名',
+      'name': 'NestedScrollView',
       'icon': Icons.add_alert,
-      'routerName': '',
+      'routerName': 'nestedScrollView',
     },
     {
       'name': '示例名',
@@ -112,7 +112,7 @@ class _DemoViewState extends State<DemoView> {
           return _widgetComponentItem(
             icon: item['icon'],
             nameText: item['name'],
-            onPressed: () => Application.router.push(context, item['routerName']),
+            onPressed: () => Application.router.push(context, item['routerName'], params: {'titleText': item['name']}),
           );
         }).toList(),
       ),
@@ -146,6 +146,8 @@ class _DemoViewState extends State<DemoView> {
             new SizedBox(height: 5.0),
             new Text(
               nameText,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: new TextStyle(
                 color: Application.config.style.mainColor,
                 fontSize: 14.0,
