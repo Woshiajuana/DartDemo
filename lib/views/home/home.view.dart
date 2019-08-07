@@ -21,6 +21,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           _widgetCellItem(
             labelText: '关于我们',
+            onPressed: () => Application.router.push(context, 'about'),
           ),
           _widgetCellItem(
             labelText: '更新记录',
@@ -58,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
     dynamic onPressed,
   }) {
     return new Container(
-      height: 45.0,
+      height: 50.0,
       decoration: new BoxDecoration(
         color: Colors.white,
         border: new Border(

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:wow_flutter/common/application.dart';
 
 class DemoView extends StatefulWidget {
   @override
@@ -9,6 +10,9 @@ class DemoView extends StatefulWidget {
 class _DemoViewState extends State<DemoView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return new Scaffold(
+      backgroundColor: Application.config.style.backgroundColor,
+
+    );
   }
 }
