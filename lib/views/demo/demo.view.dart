@@ -8,11 +8,153 @@ class DemoView extends StatefulWidget {
 }
 
 class _DemoViewState extends State<DemoView> {
+
+  List _arrData = [
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+      'routerName': '',
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+    {
+      'name': '示例名',
+      'icon': Icons.add_alert,
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       backgroundColor: Application.config.style.backgroundColor,
-
+      body: new GridView.count(
+        padding: EdgeInsets.all(5.0),
+        crossAxisCount: 3,
+        scrollDirection: Axis.vertical,
+        crossAxisSpacing: 5.0,
+        mainAxisSpacing: 5.0,
+        childAspectRatio: 2 / 2,
+        children: _arrData.map((item) {
+          return _widgetComponentItem(
+            icon: item['icon'],
+            nameText: item['name'],
+            onPressed: () => Application.router.push(context, item['routerName']),
+          );
+        }).toList(),
+      ),
     );
   }
+
+  Widget _widgetComponentItem ({
+    IconData icon,
+    String nameText = '',
+    dynamic onPressed,
+  }) {
+    return new Container(
+      decoration: new BoxDecoration(
+        color: Colors.white,
+        borderRadius: new BorderRadius.circular(5.0),
+        border: new Border.all(
+          color: Color(0xffdddddd),
+          width: 0.5,
+        )
+      ),
+      child: new FlatButton(
+        onPressed: onPressed,
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Icon(
+              icon,
+              size: 36,
+              color: Application.config.style.mainColor,
+            ),
+            new SizedBox(height: 5.0),
+            new Text(
+              nameText,
+              style: new TextStyle(
+                color: Application.config.style.mainColor,
+                fontSize: 14.0,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
 }

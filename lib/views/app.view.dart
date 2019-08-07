@@ -91,10 +91,20 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
           new UtilView(),
         ],
       ),
-      bottomNavigationBar: new Material(
-        color: Colors.white,
-        elevation: 0.0,
-        child: _widgetTabBar(),
+      bottomNavigationBar: new Container(
+        decoration: new BoxDecoration(
+          border: new Border(
+            top: new BorderSide(
+              color: Color(0xffdddddd),
+              width: 0.5,
+            )
+          ),
+        ),
+        child: new Material(
+          color: Colors.white,
+          elevation: 0.0,
+          child: _widgetTabBar(),
+        ),
       ),
     );
   }
