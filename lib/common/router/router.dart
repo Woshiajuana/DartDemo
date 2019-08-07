@@ -56,7 +56,7 @@ class Router {
         return new AboutView();
       }
     },
-    'nestedScrollerView': {
+    'nestedScrollView': {
       'route': (_) => new NestedScrollViewDemo(),
       'handle': (params) {
         return new NestedScrollViewDemo(titleText: params['titleText']);
