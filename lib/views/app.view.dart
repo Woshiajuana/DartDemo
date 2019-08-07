@@ -43,7 +43,7 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     _tabController = new TabController(
-      length: 4, // Tab页的个数
+      length: _arrTab.length, // Tab页的个数
       vsync: this, // 动画效果的异步处理，默认格式
     );
     _pageController = new PageController(
