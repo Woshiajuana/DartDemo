@@ -16,6 +16,25 @@ class AppView extends StatefulWidget {
 
 class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
 
+  // Tab页面
+  List _arrTab = [
+    {
+      'text': '首页',
+      'icon': Icons.home,
+    },
+    {
+      'text': '示例',
+      'icon': Icons.home,
+    },
+    {
+      'text': '工具',
+      'icon': Icons.home,
+    },
+    {
+      'text': '关于',
+      'icon': Icons.home,
+    },
+  ];
   // Tab页的控制器，可以用来定义Tab标签和内容页的坐标
   TabController _tabController;
   PageController _pageController;
@@ -31,6 +50,15 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
       initialPage: 0,
     );
     Application.context = context;
+  }
+
+  // 组件即将销毁时调用
+  @override
+  void dispose() {
+    // 释放内存，节省开销
+    _tabController.dispose();
+    _pageController.dispose();
+    super.dispose();
   }
 
   // 生命周期方法构建Widget时调用
@@ -50,61 +78,58 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
       bottomNavigationBar: new Material(
         color: Colors.white,
         elevation: 0.0,
-        child: new TabBar(
-          indicatorColor: Colors.white,
-          controller: _tabController,
-          tabs: <Tab>[
-            new Tab(
-              child: new Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Text('首页', style: TextStyle(fontSize: 10)),
-                ],
-              ),
-            ),
-            new Tab(
-              child: new Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Text('示例', style: TextStyle(fontSize: 10)),
-                ],
-              ),
-            ),
-            new Tab(
-              child: new Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Text('工具', style: TextStyle(fontSize: 10)),
-                ],
-              ),
-            ),
-            new Tab(
-              child: new Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Text('关于', style: TextStyle(fontSize: 10)),
-                ],
-              ),
-            ),
-          ],
-          labelColor: Color(0xff1296db),
-          unselectedLabelColor: Color(0xff999999),
-          onTap: (index) {
-            _pageController.jumpToPage(index);
-          },
-        ),
+        child: _widgetTabBar(),
       ),
     );
   }
 
-  // 组件即将销毁时调用
-  @override
-  void dispose() {
-    // 释放内存，节省开销
-    _tabController.dispose();
-    _pageController.dispose();
-    super.dispose();
+  Widget _widgetTabBar () {
+    return new TabBar(
+      indicatorColor: Colors.white,
+      controller: _tabController,
+      tabs: <Tab>[
+        new Tab(
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Text('首页', style: TextStyle(fontSize: 10)),
+            ],
+          ),
+        ),
+        new Tab(
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Text('示例', style: TextStyle(fontSize: 10)),
+            ],
+          ),
+        ),
+        new Tab(
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Text('工具', style: TextStyle(fontSize: 10)),
+            ],
+          ),
+        ),
+        new Tab(
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Text('关于', style: TextStyle(fontSize: 10)),
+            ],
+          ),
+        ),
+      ],
+      labelColor: Color(0xff1296db),
+      unselectedLabelColor: Color(0xff999999),
+      onTap: (index) {
+        _pageController.jumpToPage(index);
+      },
+    );
   }
+
+
 
   static Future<void> pop() async {
     await SystemChannels.platform.invokeMethod('SystemNavigator.pop');

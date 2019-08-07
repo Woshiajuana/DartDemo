@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 
   // 判断
   void _test() {
-    print('Application.common.router.routes => ${Application.router.routes == Application.router.routes}');
+    print('Application.common.router.routes1 => ${Application.router.routes == Application.router.routes}');
   }
 
   // This widget is the root of your application.
