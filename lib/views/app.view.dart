@@ -24,15 +24,15 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
     },
     {
       'text': '示例',
-      'icon': Icons.home,
+      'icon': Icons.extension,
     },
     {
       'text': '工具',
-      'icon': Icons.home,
+      'icon': Icons.build,
     },
     {
       'text': '关于',
-      'icon': Icons.home,
+      'icon': Icons.face,
     },
   ];
   // Tab页的控制器，可以用来定义Tab标签和内容页的坐标
@@ -84,43 +84,21 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
   }
 
   Widget _widgetTabBar () {
+    List<Widget> tabs = _arrTab.map((item) {
+      return new Tab(
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Icon(item['icon'], size: 24.0,),
+            new Text(item['text'], style: new TextStyle(fontSize: 10.0,),)
+          ],
+        ),
+      );
+    }).toList();
     return new TabBar(
       indicatorColor: Colors.white,
       controller: _tabController,
-      tabs: <Tab>[
-        new Tab(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text('首页', style: TextStyle(fontSize: 10)),
-            ],
-          ),
-        ),
-        new Tab(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text('示例', style: TextStyle(fontSize: 10)),
-            ],
-          ),
-        ),
-        new Tab(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text('工具', style: TextStyle(fontSize: 10)),
-            ],
-          ),
-        ),
-        new Tab(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text('关于', style: TextStyle(fontSize: 10)),
-            ],
-          ),
-        ),
-      ],
+      tabs: tabs,
       labelColor: Color(0xff1296db),
       unselectedLabelColor: Color(0xff999999),
       onTap: (index) {
@@ -128,8 +106,6 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
       },
     );
   }
-
-
 
   static Future<void> pop() async {
     await SystemChannels.platform.invokeMethod('SystemNavigator.pop');
