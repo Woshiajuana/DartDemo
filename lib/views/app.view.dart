@@ -23,7 +23,7 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
       'icon': Icons.home,
     },
     {
-      'text': '示例',
+      'text': '组件',
       'icon': Icons.extension,
     },
     {

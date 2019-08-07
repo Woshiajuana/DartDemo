@@ -7,6 +7,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +15,7 @@ class _HomeViewState extends State<HomeView> {
       child: new Stack(
         children: <Widget>[
           _widgetMainSection(),
-          _widgetSearchSection(),
+//          _widgetSearchSection(),
         ],
       ),
     );
@@ -38,14 +39,22 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget _widgetSearchSection () {
+    double numRadius = MediaQuery.of(context).size.width / 2;
     return new Positioned(
       bottom: 0,
       left: 0,
       right: 0,
       child: new Container(
-        height: 100.0,
-        color: Colors.amber,
+        height: numRadius,
+        decoration: new BoxDecoration(
+          color: Colors.white,
+          borderRadius: new BorderRadius.only(
+            topLeft: new Radius.circular(numRadius),
+            topRight: new Radius.circular(numRadius),
+          ),
+        ),
       ),
     );
   }
+
 }
