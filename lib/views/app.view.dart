@@ -21,18 +21,22 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
     {
       'text': '首页',
       'icon': Icons.home,
+      'widget': new HomeView(),
     },
     {
-      'text': '组件',
+      'text': '示例',
       'icon': Icons.extension,
+      'widget': new DemoView(),
     },
     {
       'text': '工具',
       'icon': Icons.build,
+      'widget': new UtilView(),
     },
     {
       'text': '关于',
       'icon': Icons.face,
+      'widget': new AboutView(),
     },
   ];
   // Tab页的控制器，可以用来定义Tab标签和内容页的坐标
@@ -65,6 +69,28 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: new AppBar(
+        title: new Text(
+          'WowFlutter',
+          style: new TextStyle(
+            fontSize: 16.0,
+          ),
+        ),
+        actions: <Widget>[
+          new Container(
+            width: 60.0,
+            child: new FlatButton(
+              onPressed: () => {},
+              padding: const EdgeInsets.all(0),
+              child: new Icon(
+                Icons.search,
+                size: 28.0,
+                color: Colors.white,
+              ),
+            ),
+          )
+        ],
+      ),
       body: new PageView(
         controller: _pageController,
         physics: new NeverScrollableScrollPhysics(),
