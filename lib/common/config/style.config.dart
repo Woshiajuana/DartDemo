@@ -29,4 +29,16 @@ class Style {
     return IconData(0xe7da, fontFamily: TAO_BAO_FAMILY);
   }
 
+  Color get backgroundColor {
+    return Color(0xfff2f2f2);
+  }
+
+  Color get mainColor {
+    return Color(0xff1296db);
+  }
+
+  Color get unselectedLabelColor {
+    return Color(0xff999999);
+  }
+
 }

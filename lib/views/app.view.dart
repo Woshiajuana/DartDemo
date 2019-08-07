@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:wow_flutter/views/home/home.view.dart';
-import 'package:wow_flutter/views/about/about.view.dart';
 import 'package:wow_flutter/views/demo/demo.view.dart';
 import 'package:wow_flutter/views/util/util.view.dart';
 import 'package:wow_flutter/common/application.dart';
@@ -20,23 +19,15 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
   List _arrTab = [
     {
       'text': '首页',
-      'icon': Icons.home,
-      'widget': new HomeView(),
+      'icon': Icons.face,
     },
     {
       'text': '示例',
       'icon': Icons.extension,
-      'widget': new DemoView(),
     },
     {
       'text': '工具',
       'icon': Icons.build,
-      'widget': new UtilView(),
-    },
-    {
-      'text': '关于',
-      'icon': Icons.face,
-      'widget': new AboutView(),
     },
   ];
   // Tab页的控制器，可以用来定义Tab标签和内容页的坐标
@@ -98,7 +89,6 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
           new HomeView(),
           new DemoView(),
           new UtilView(),
-          new AboutView(),
         ],
       ),
       bottomNavigationBar: new Material(
@@ -125,8 +115,8 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
       indicatorColor: Colors.white,
       controller: _tabController,
       tabs: tabs,
-      labelColor: Color(0xff1296db),
-      unselectedLabelColor: Color(0xff999999),
+      labelColor: Application.config.style.mainColor,
+      unselectedLabelColor: Application.config.style.unselectedLabelColor,
       onTap: (index) {
         _pageController.jumpToPage(index);
       },
