@@ -65,6 +65,15 @@ class _AppViewState extends State<AppView> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: new AppBar(
+        title: new Text(
+          'WOW-FLUTTER',
+          style: new TextStyle(
+            color: Colors.white,
+            fontSize: 16.0,
+          ),
+        ),
+      ),
       body: new PageView(
         controller: _pageController,
         physics: new NeverScrollableScrollPhysics(),

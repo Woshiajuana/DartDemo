@@ -11,6 +11,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
+      child: new Container(),
     );
   }
 }
