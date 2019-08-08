@@ -24,7 +24,7 @@ class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
     'demoLinkList': [
       {
         'labelText': '当有下拉动作时，会显示 AppBar',
-        'routeName': 'sliverAppBarFloating',
+        'routeName': 'sliverAppBarParams',
       },
     ],
     'paramsExplain': 'const SliverAppBar({\n' +

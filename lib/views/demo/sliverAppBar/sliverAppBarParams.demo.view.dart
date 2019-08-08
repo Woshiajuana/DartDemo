@@ -1,14 +1,19 @@
 
 import 'package:flutter/material.dart';
 
-class SliverAppBarFloating extends StatelessWidget {
+class SliverAppBarParams extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new CustomScrollView(
         slivers: <Widget>[
           new SliverAppBar(
-            title: Text('SliverAppBarFloating'),
+            title: new Text(
+              'SliverAppBarParams',
+              style: new TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
             centerTitle: true,
             // 展开的高度
             expandedHeight: 300.0,
@@ -33,7 +38,7 @@ class SliverAppBarFloating extends StatelessWidget {
           new SliverFillRemaining(
             child: new Center(
               child: new Text(
-                'FillRemaining',
+                'content',
                 style: new TextStyle(fontSize: 30.0),
               )
             ),

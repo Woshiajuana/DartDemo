@@ -9,7 +9,7 @@ import 'package:wow_flutter/views/about/about.view.dart';
 import 'package:wow_flutter/views/welcome/welcome.view.dart';
 import 'package:wow_flutter/views/demo/nestedScrollView/nestedScrollView.demo.view.dart';
 import 'package:wow_flutter/views/demo/sliverAppBar/sliverAppBar.demo.view.dart';
-import 'package:wow_flutter/views/demo/sliverAppBar/sliverAppBarFloating.demo.view.dart';
+import 'package:wow_flutter/views/demo/sliverAppBar/sliverAppBarParams.demo.view.dart';
 
 class Router {
 
@@ -70,10 +70,10 @@ class Router {
         return new SliverAppBarDemo(titleText: params['titleText']);
       }
     },
-    'sliverAppBarFloating': {
-      'route': (_) => new SliverAppBarFloating(),
+    'sliverAppBarParams': {
+      'route': (_) => new SliverAppBarParams(),
       'handle': (params) {
-        return new SliverAppBarFloating();
+        return new SliverAppBarParams();
       }
     },
   };
