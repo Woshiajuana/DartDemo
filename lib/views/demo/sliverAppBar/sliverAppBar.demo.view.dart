@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wow_flutter/common/application.dart';
+import 'package:wow_flutter/widgets/paramsExplain.widget.dart';
 
 
 class SliverAppBarDemo extends StatefulWidget {
@@ -20,6 +21,7 @@ class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Application.config.style.backgroundColor,
       appBar: new AppBar(
         title: new Text(
           widget.titleText,
@@ -30,7 +32,7 @@ class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
       ),
       body: new ListView(
         children: <Widget>[
-
+          new ParamsExplainWidget(),
         ],
       ),
     );

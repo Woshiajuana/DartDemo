@@ -19,6 +19,7 @@ class _NestedScrollViewDemoState extends State<NestedScrollViewDemo> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Application.config.style.backgroundColor,
       appBar: new AppBar(
         title: new Text(
           widget.titleText,
