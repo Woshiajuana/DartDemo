@@ -141,7 +141,7 @@ class _DemoViewState extends State<DemoView> {
             new Icon(
               icon,
               size: 36,
-              color: Application.config.style.mainColor,
+              color: Application.config.style.unselectedLabelColor,
             ),
             new SizedBox(height: 5.0),
             new Text(
@@ -149,7 +149,7 @@ class _DemoViewState extends State<DemoView> {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: new TextStyle(
-                color: Application.config.style.mainColor,
+                color: Application.config.style.unselectedLabelColor,
                 fontSize: 14.0,
               ),
             )
