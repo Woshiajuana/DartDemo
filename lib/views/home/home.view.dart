@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wow_flutter/common/application.dart';
+import 'package:wow_flutter/widgets/cellLink.dart';
 
 class HomeView extends StatefulWidget {
   @override
@@ -16,14 +17,14 @@ class _HomeViewState extends State<HomeView> {
       body: new ListView(
         children: <Widget>[
           _widgetHeaderSection(),
-          _widgetCellItem(
+          new CellLink(
             labelText: 'GetHub',
           ),
-          _widgetCellItem(
+          new CellLink(
             labelText: '关于我们',
             onPressed: () => Application.router.push(context, 'about'),
           ),
-          _widgetCellItem(
+          new CellLink(
             labelText: '更新记录',
           ),
         ],
@@ -49,52 +50,6 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _widgetCellItem ({
-    String labelText = '',
-    String valueText = '',
-    dynamic onPressed,
-  }) {
-    return new Container(
-      height: 50.0,
-      decoration: new BoxDecoration(
-        color: Colors.white,
-        border: new Border(
-          top: new BorderSide(
-            color: Color(0xffdddddd),
-            width: 0.5,
-          ),
-          bottom: new BorderSide(
-            color: Color(0xffdddddd),
-            width: 0.5,
-          ),
-        )
-      ),
-      child: new FlatButton(
-        onPressed: onPressed,
-        child: new Row(
-          children: <Widget>[
-            new Text(
-              labelText,
-              style: new TextStyle(
-                color: Color(0xff666666),
-                fontSize: 16.0,
-              ),
-            ),
-            new Expanded(child: new Container(), flex: 1),
-            new Text(
-              valueText,
-              style: new TextStyle(
-                color: Color(0xff666666),
-                fontSize: 16.0,
-              ),
-            ),
-            new Icon(Icons.arrow_forward_ios, size: 16.0, color: Color(0xff666666),),
-          ],
-        ),
       ),
     );
   }
