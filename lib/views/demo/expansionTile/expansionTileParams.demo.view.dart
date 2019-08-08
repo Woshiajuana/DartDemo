@@ -44,12 +44,12 @@ class ExpansionTileParams extends StatelessWidget {
         // 展开或者收缩的回调，true 表示展开
         onExpansionChanged: (expanded) => print('ExpansionTile is ${expanded ? 'expanded' : 'collapsed'}'),
         children: List.generate(10, (position) =>
-        new Container(
-          padding: const EdgeInsets.only(left: 80.0),
-          child: new Text('Children ${position + 1}'),
-          height: 50.0,
-          alignment: Alignment.centerLeft,
-        ),
+          new Container(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: new Text('Children ${position + 1}'),
+            height: 50.0,
+            alignment: Alignment.centerLeft,
+          ),
         ),
       ),
     );

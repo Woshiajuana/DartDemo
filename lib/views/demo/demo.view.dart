@@ -12,90 +12,18 @@ class _DemoViewState extends State<DemoView> {
   List _arrData = [
     {
       'name': 'NestedScrollView',
-      'icon': Icons.add_alert,
+      'icon': Icons.line_weight,
       'routerName': 'nestedScrollView',
     },
     {
       'name': 'SliverAppBar',
-      'icon': Icons.add_alert,
+      'icon': Icons.web_asset,
       'routerName': 'sliverAppBar',
     },
     {
       'name': 'ExpansionTile',
-      'icon': Icons.add_alert,
+      'icon': Icons.list,
       'routerName': 'expansionTile',
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
-    },
-    {
-      'name': '示例名',
-      'icon': Icons.add_alert,
     },
   ];
 
