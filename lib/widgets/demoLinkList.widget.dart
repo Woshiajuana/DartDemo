@@ -6,25 +6,28 @@ class DemoLinkListWidget extends StatelessWidget {
 
   const DemoLinkListWidget({
     Key key,
-    this.onPressed,
     this.labelText = '',
     this.valueText = '',
   }) : super(key: key);
 
-  final dynamic onPressed;
   final String labelText;
   final String valueText;
 
   @override
   Widget build(BuildContext context) {
     return new Container(
+      margin: const EdgeInsets.only(top: 10.0),
       decoration: new BoxDecoration(
         color: Colors.white,
         border: new Border(
-            bottom: new BorderSide(
-              color: Color(0xffdddddd),
-              width: 0.5,
-            )
+          top: new BorderSide(
+            color: Color(0xffdddddd),
+            width: 0.5,
+          ),
+          bottom: new BorderSide(
+            color: Color(0xffdddddd),
+            width: 0.5,
+          ),
         ),
       ),
       padding: const EdgeInsets.all(10.0),

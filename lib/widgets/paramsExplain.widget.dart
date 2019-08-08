@@ -17,14 +17,18 @@ class ParamsExplainWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      margin: const EdgeInsets.only(),
+      margin: const EdgeInsets.only(top: 10.0),
       decoration: new BoxDecoration(
         color: Colors.white,
         border: new Border(
+          top: new BorderSide(
+            color: Color(0xffdddddd),
+            width: 0.5,
+          ),
           bottom: new BorderSide(
             color: Color(0xffdddddd),
             width: 0.5,
-          )
+          ),
         ),
       ),
       padding: const EdgeInsets.all(10.0),

@@ -19,6 +19,11 @@ class SliverAppBarDemo extends StatefulWidget {
 }
 
 class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
+
+  Map _objData = {
+    '': '',
+  };
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

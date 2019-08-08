@@ -28,14 +28,14 @@ class _NestedScrollViewDemoState extends State<NestedScrollViewDemo> {
           ),
         ),
       ),
-      body: new NestedScrollView(
-//        headerSliverBuilder: () {},
-        body: new ListView(
-          children: <Widget>[
-            new Container(height: 300.0, width: MediaQuery.of(context).size.width, color: Colors.blue),
-          ],
-        ),
-      ),
+//      body: new NestedScrollView(
+////        headerSliverBuilder: () {},
+//        body: new ListView(
+//          children: <Widget>[
+//            new Container(height: 300.0, width: MediaQuery.of(context).size.width, color: Colors.blue),
+//          ],
+//        ),
+//      ),
     );
   }
 }
