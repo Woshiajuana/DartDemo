@@ -25,6 +25,10 @@ class Style {
     return 'assets/images/goods-icon-null-bg.png';
   }
 
+  String get srcDemoUrl {
+    return 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3245994356,1314206822&fm=26&gp=0.jpg';
+  }
+
   IconData get iconSearch {
     return IconData(0xe7da, fontFamily: TAO_BAO_FAMILY);
   }

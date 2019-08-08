@@ -31,7 +31,7 @@ class SliverAppBarParams extends StatelessWidget {
             flexibleSpace: new FlexibleSpaceBar(
               // 背景折叠动画
               collapseMode: CollapseMode.parallax,
-              background: Image.network('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3245994356,1314206822&fm=26&gp=0.jpg', fit: BoxFit.cover),
+              background: Image.network(Application.config.style.srcDemoUrl, fit: BoxFit.cover),
             ),
           ),
           // 这个部件一般用于最后填充用的，会占有一个屏幕的高度，
