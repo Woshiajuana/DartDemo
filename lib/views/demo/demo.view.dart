@@ -16,8 +16,9 @@ class _DemoViewState extends State<DemoView> {
       'routerName': 'nestedScrollView',
     },
     {
-      'name': '示例名',
+      'name': 'SliverAppBar',
       'icon': Icons.add_alert,
+      'routerName': 'sliverAppBar',
     },
     {
       'name': '示例名',
