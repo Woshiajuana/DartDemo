@@ -27,12 +27,12 @@ class DemoLinkListWidget extends StatelessWidget {
       ),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: _widgetDemoListSection(),
+        children: _widgetDemoListSection(context),
       ),
     );
   }
 
-  List<Widget> _widgetDemoListSection () {
+  List<Widget> _widgetDemoListSection (BuildContext context) {
     List<Widget> list = [_widgetTitleSection()];
     list.addAll(demoLinkList.map((item) {
       return new CellLinkWidget(
