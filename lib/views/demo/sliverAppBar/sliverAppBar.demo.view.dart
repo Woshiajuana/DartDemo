@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:wow_flutter/common/application.dart';
 
+
 class SliverAppBarDemo extends StatefulWidget {
 
   const SliverAppBarDemo({
@@ -18,6 +19,15 @@ class SliverAppBarDemo extends StatefulWidget {
 class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: new AppBar(
+        title: new Text(
+          widget.titleText,
+          style: new TextStyle(
+            fontSize: 16.0,
+          ),
+        ),
+      ),
+    );
   }
 }
