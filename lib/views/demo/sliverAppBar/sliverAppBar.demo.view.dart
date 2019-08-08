@@ -23,21 +23,9 @@ class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
   Map _objData = {
     'demoLinkList': [
       {
-        'labelText': 'hahah2',
+        'labelText': '当有下拉动作时，会显示 AppBar',
         'valueText': 'haha1',
-        'routeName': 'xxx',
-      },
-      {
-        'labelText': 'hahah2',
-        'valueText': 'haha1',
-      },
-      {
-        'labelText': 'hahah2',
-        'valueText': 'haha1',
-      },
-      {
-        'labelText': 'hahah2',
-        'valueText': 'haha1',
+        'routeName': 'sliverAppBarFloating',
       },
     ],
     'paramsExplain': 'const SliverAppBar({\n' +
