@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:wow_flutter/common/application.dart';
 import 'package:wow_flutter/widgets/paramsExplain.widget.dart';
+import 'package:wow_flutter/widgets/demoLinkList.widget.dart';
 
 
 class SliverAppBarDemo extends StatefulWidget {
@@ -32,6 +33,7 @@ class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
       ),
       body: new ListView(
         children: <Widget>[
+          new DemoLinkListWidget(),
           new ParamsExplainWidget(),
         ],
       ),
