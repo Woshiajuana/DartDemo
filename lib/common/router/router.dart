@@ -11,6 +11,7 @@ import 'package:wow_flutter/views/demo/nestedScrollView/nestedScrollView.demo.vi
 import 'package:wow_flutter/views/demo/sliverAppBar/sliverAppBar.demo.view.dart';
 import 'package:wow_flutter/views/demo/sliverAppBar/sliverAppBarParams.demo.view.dart';
 import 'package:wow_flutter/views/demo/expansionTile/expansionTile.demo.view.dart';
+import 'package:wow_flutter/views/demo/expansionTile/expansionTileParams.demo.view.dart';
 
 class Router {
 
@@ -81,6 +82,12 @@ class Router {
       'route': (_) => new ExpansionTileDemo(),
       'handle': (params) {
         return new ExpansionTileDemo(titleText: params['titleText']);
+      }
+    },
+    'expansionTileParams': {
+      'route': (_) => new ExpansionTileParams(),
+      'handle': (params) {
+        return new ExpansionTileParams();
       }
     },
   };

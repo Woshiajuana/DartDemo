@@ -16,8 +16,8 @@ class ExpansionTileDemo extends StatelessWidget{
   final Map _objData = {
     'demoLinkList': [
       {
-        'labelText': '当有下拉动作时，会显示 AppBar',
-        'routeName': 'sliverAppBarParams',
+        'labelText': '参数示例',
+        'routeName': 'expansionTileParams',
       },
     ],
     'paramsExplain': 'const SliverAppBar({\n' +
