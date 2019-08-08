@@ -37,22 +37,23 @@ class CellLinkWidget extends StatelessWidget {
       ),
       child: new FlatButton(
         onPressed: onPressed,
+        padding: const EdgeInsets.only(left: 10.0, right: 10.0),
         child: new Row(
           children: <Widget>[
             new Text(
-              labelText,
+              labelText ?? '',
               style: new TextStyle(
                 color: Color(0xff666666),
-                fontSize: 16.0,
+                fontSize: 14.0,
                 fontWeight: FontWeight.normal,
               ),
             ),
             new Expanded(child: new Container(), flex: 1),
             new Text(
-              valueText,
+              valueText ?? '',
               style: new TextStyle(
                 color: Color(0xff666666),
-                fontSize: 16.0,
+                fontSize: 14.0,
                 fontWeight: FontWeight.normal,
               ),
             ),
