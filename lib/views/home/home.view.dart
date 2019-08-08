@@ -80,7 +80,7 @@ class _HomeViewState extends State<HomeView> {
             new Text(
               labelText,
               style: new TextStyle(
-                color: Color(0xff333333),
+                color: Color(0xff666666),
                 fontSize: 16.0,
               ),
             ),
@@ -88,11 +88,11 @@ class _HomeViewState extends State<HomeView> {
             new Text(
               valueText,
               style: new TextStyle(
-                color: Color(0xff333333),
+                color: Color(0xff666666),
                 fontSize: 16.0,
               ),
             ),
-            new Icon(Icons.arrow_forward_ios, size: 16.0,),
+            new Icon(Icons.arrow_forward_ios, size: 16.0, color: Color(0xff666666),),
           ],
         ),
       ),
