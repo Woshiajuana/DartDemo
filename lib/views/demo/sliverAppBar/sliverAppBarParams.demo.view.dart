@@ -1,10 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:wow_flutter/common/application.dart';
 
 class SliverAppBarParams extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Application.config.style.backgroundColor,
       body: new CustomScrollView(
         slivers: <Widget>[
           new SliverAppBar(
