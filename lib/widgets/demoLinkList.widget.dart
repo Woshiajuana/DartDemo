@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wow_flutter/widgets/cellLink.widget.dart';
+import 'package:wow_flutter/common/application.dart';
 
 class DemoLinkListWidget extends StatelessWidget {
 
@@ -37,7 +38,7 @@ class DemoLinkListWidget extends StatelessWidget {
       return new CellLinkWidget(
         labelText: item['labelText'],
         valueText: item['valueText'],
-        onPressed: () => {},
+        onPressed: () => Application.router.push(context, item['routeName']),
       );
     }).toList());
     return list;

@@ -25,6 +25,7 @@ class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
       {
         'labelText': 'hahah2',
         'valueText': 'haha1',
+        'onPressed': () => Application.router.push(context, 'xxxx'),
       },
       {
         'labelText': 'hahah2',
