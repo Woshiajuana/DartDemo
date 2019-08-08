@@ -6,12 +6,10 @@ class DemoLinkListWidget extends StatelessWidget {
 
   const DemoLinkListWidget({
     Key key,
-    this.labelText = '',
-    this.valueText = '',
+    this.demoLinkList,
   }) : super(key: key);
 
-  final String labelText;
-  final String valueText;
+  final List demoLinkList;
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +28,29 @@ class DemoLinkListWidget extends StatelessWidget {
           ),
         ),
       ),
-      padding: const EdgeInsets.all(10.0),
+//      padding: const EdgeInsets.all(10.0),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          _widgetTitleSection(),
-        ],
+        children: _widgetDemoListSection(),
       ),
     );
   }
 
+  List<Widget> _widgetDemoListSection () {
+    List<Widget> list = [_widgetTitleSection()];
+    list.addAll(demoLinkList.map((item) {
+      return new CellLinkWidget(
+        labelText: item['labelText'],
+        valueText: item['valueText'],
+        onPressed: () => {},
+      );
+    }).toList());
+    return list;
+  }
+
   Widget _widgetTitleSection () {
     return new Container(
+      padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 10.0),
       child: new Text(
         '案例列表：',
         style: new TextStyle(

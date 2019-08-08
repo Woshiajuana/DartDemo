@@ -50,7 +50,7 @@ class CellLinkWidget extends StatelessWidget {
                 fontSize: 16.0,
               ),
             ),
-            new Icon(Icons.arrow_forward_ios, size: 16.0, color: Color(0xff666666),),
+            onPressed == null ? new Container() : new Icon(Icons.arrow_forward_ios, size: 16.0, color: Color(0xff666666),),
           ],
         ),
       ),
