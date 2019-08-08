@@ -22,13 +22,8 @@ class DemoLinkListWidget extends StatelessWidget {
             color: Color(0xffdddddd),
             width: 0.5,
           ),
-          bottom: new BorderSide(
-            color: Color(0xffdddddd),
-            width: 0.5,
-          ),
         ),
       ),
-//      padding: const EdgeInsets.all(10.0),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: _widgetDemoListSection(),
@@ -50,13 +45,26 @@ class DemoLinkListWidget extends StatelessWidget {
 
   Widget _widgetTitleSection () {
     return new Container(
-      padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 10.0),
-      child: new Text(
-        '案例列表：',
-        style: new TextStyle(
-          color: Color(0xff333333),
-          fontSize: 16.0,
+      padding: const EdgeInsets.all(10.0),
+      height: 50.0,
+      decoration: new BoxDecoration(
+        border: new Border(
+          bottom: new BorderSide(
+            color: Color(0xffdddddd),
+            width: 0.5,
+          ),
         ),
+      ),
+      child: new Row(
+        children: <Widget>[
+          new Text(
+            '案例列表：',
+            style: new TextStyle(
+              color: Color(0xff333333),
+              fontSize: 16.0,
+            ),
+          ),
+        ],
       ),
     );
   }
