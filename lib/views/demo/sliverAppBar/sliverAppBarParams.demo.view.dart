@@ -14,7 +14,6 @@ class SliverAppBarParams extends StatelessWidget {
                 fontSize: 16.0,
               ),
             ),
-            centerTitle: true,
             // 展开的高度
             expandedHeight: 300.0,
             // 强制显示阴影

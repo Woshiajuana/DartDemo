@@ -5,45 +5,34 @@ class ExpansionTileParams extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: new CustomScrollView(
-        slivers: <Widget>[
-          new SliverAppBar(
-            title: new Text(
-              'ExpansionTileParams',
-              style: new TextStyle(
-                fontSize: 16.0,
-              ),
-            ),
-            centerTitle: true,
-            // 展开的高度
-            expandedHeight: 300.0,
-            // 强制显示阴影
-            forceElevated: true,
-            // 设置该属性，当有下滑手势的时候，就会显示 AppBar
-            floating: true,
-            // 该属性只有在 floating 为 true 的情况下使用，不然会报错
-            // 当下滑到一定比例，会自动把 AppBar 展开
-//            snap: true,
-            // 设置该属性使 Appbar 折叠后不消失
-            pinned: true,
-            // 通过这个属性设置 AppBar 的背景
-            flexibleSpace: new FlexibleSpaceBar(
-              // 背景折叠动画
-              collapseMode: CollapseMode.parallax,
-              background: Image.network('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3245994356,1314206822&fm=26&gp=0.jpg', fit: BoxFit.cover),
-            ),
+      appBar: new AppBar(
+        title: new Text(
+          'ExpansionTileParams',
+          style: new TextStyle(
+            fontSize: 16.0,
           ),
-          // 这个部件一般用于最后填充用的，会占有一个屏幕的高度，
-          // 可以在 child 属性加入需要展示的部件
-          new SliverFillRemaining(
-            child: new Center(
-                child: new Text(
-                  'content',
-                  style: new TextStyle(fontSize: 30.0),
-                )
-            ),
+        ),
+      ),
+      body: new ExpansionTile(
+        // 最前面的 widget
+        leading: new Icon(Icons.phone_android),
+        // 替换默认箭头
+//        trailing: Icon(Icons.phone_iphone),
+        title: new Text('Parent'),
+        // 默认是否展开
+        initiallyExpanded: true,
+        // 展开时候的背景色
+        backgroundColor: Colors.yellow[100],
+        // 展开或者收缩的回调，true 表示展开
+        onExpansionChanged: (expanded) => print('ExpansionTile is ${expanded ? 'expanded' : 'collapsed'}'),
+        children: List.generate(10, (position) =>
+          Container(
+            padding: const EdgeInsets.only(left: 80.0),
+            child: Text('Children ${position + 1}'),
+            height: 50.0,
+            alignment: Alignment.centerLeft,
           ),
-        ],
+        ),
       ),
     );
   }
