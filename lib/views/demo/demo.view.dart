@@ -21,8 +21,9 @@ class _DemoViewState extends State<DemoView> {
       'routerName': 'sliverAppBar',
     },
     {
-      'name': '示例名',
+      'name': 'ExpansionTile',
       'icon': Icons.add_alert,
+      'routerName': 'expansionTile',
     },
     {
       'name': '示例名',
