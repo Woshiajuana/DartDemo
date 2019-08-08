@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-class CellLink extends StatefulWidget {
+class CellLinkWidget extends StatefulWidget {
 
-  const CellLink({
+  const CellLinkWidget({
     Key key,
     this.onPressed,
     this.labelText = '',
@@ -15,10 +15,10 @@ class CellLink extends StatefulWidget {
   final String valueText;
 
   @override
-  _CellLinkState createState() => _CellLinkState();
+  _CellLinkWidgetState createState() => _CellLinkWidgetState();
 }
 
-class _CellLinkState extends State<CellLink> {
+class _CellLinkWidgetState extends State<CellLinkWidget> {
   @override
   Widget build(BuildContext context) {
     return new Container(

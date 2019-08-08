@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wow_flutter/common/application.dart';
-import 'package:wow_flutter/widgets/cellLink.dart';
+import 'package:wow_flutter/widgets/cellLink.widget.dart';
 
 class HomeView extends StatefulWidget {
   @override
@@ -17,14 +17,14 @@ class _HomeViewState extends State<HomeView> {
       body: new ListView(
         children: <Widget>[
           _widgetHeaderSection(),
-          new CellLink(
+          new CellLinkWidget(
             labelText: 'GetHub',
           ),
-          new CellLink(
+          new CellLinkWidget(
             labelText: '关于我们',
             onPressed: () => Application.router.push(context, 'about'),
           ),
-          new CellLink(
+          new CellLinkWidget(
             labelText: '更新记录',
           ),
         ],

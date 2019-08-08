@@ -28,6 +28,11 @@ class _SliverAppBarDemoState extends State<SliverAppBarDemo> {
           ),
         ),
       ),
+      body: new ListView(
+        children: <Widget>[
+
+        ],
+      ),
     );
   }
 }
