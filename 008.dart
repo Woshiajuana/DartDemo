@@ -14,7 +14,24 @@ main() {
 
   var f1 = add;
 
-  return 1;
+  for (var item in arr) {
+    print('item => $item');
+  }
+
+  var s = Set<int>();
+
+  var m = {
+    'name': '1',
+  };
+
+  m['xx'] = '1';
+
+  var m2 = Map();
+  var mm = m.map((key, value) => MapEntry(key, value));
+  m2.addEntries(m.entries.map((e) => MapEntry(e.key, e.value)).toList());
+
+  print('m => $m');
+  print('m2 => $m2');
 }
 
 typedef Add = int Function(int, int);
